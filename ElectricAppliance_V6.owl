@@ -1,0 +1,1682 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#"
+     xml:base="http://www.ElectricAppliance/OntologiesElectricAppliance.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl">
+        <rdfs:comment xml:lang="en">Ontology regarding the Electric Appliances</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasBrand">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasCapacity -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasFeatures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasConsumerRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasConsumerRating">
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isConsumerRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasCountry">
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasFeatures -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasFeatures">
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Features"/>
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance">
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasPowerConsumptionRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasPowerConsumptionRating">
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isPowerConsumptionRatingOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasFeatures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasUsageType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasUsageType">
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isUsageType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasWattage -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasWattage">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasFeatures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isBrandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isBrandOf">
+        <rdfs:domain rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+        <rdfs:range rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasBrand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isCapacityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isCapacityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isConsumerRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isConsumerRating"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isCountry"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isMaintenanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isMaintenanceOf">
+        <owl:inverseOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isPowerConsumptionRatingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isPowerConsumptionRatingOf"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isSizeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isSizeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isUsageType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isUsageType"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isWattageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isWattageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#isFeaturesOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasPriceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasPriceValue">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasProductId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasProductId">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1StarRating -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1StarRating">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2StarRating -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2StarRating">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3StarRating -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3StarRating">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AirConditioners -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AirConditioners">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Blender -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Blender">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ProductWarranty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Computers -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Computers">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1StarRating"/>
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2StarRating"/>
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3StarRating"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CookerHood -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CookerHood">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ServiceWarranty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Repair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#DVDPlayers -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#DVDPlayers">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricKettle -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricKettle">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricOven -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricOven">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasUsageType"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasBrand"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasPriceValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Features -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Features"/>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#GameConsoles -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#GameConsoles">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HighConsumption -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HighConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Iron -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Iron">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ServiceWarranty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LowConsumption -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LowConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MediumConsumption -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MediumConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Repair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HighConsumption"/>
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LowConsumption"/>
+                    <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MediumConsumption"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ProductWarranty -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ProductWarranty">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty"/>
+        <owl:disjointWith rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ServiceWarranty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Refrigerators -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Refrigerators">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Repair -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Repair">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance"/>
+        <owl:disjointWith rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#RiceCooker -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#RiceCooker">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ServiceWarranty -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ServiceWarranty">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ShowerHeater -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ShowerHeater">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#TVs -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#TVs">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toaster -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toaster">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#VacuumCleaner -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#VacuumCleaner">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ValuePartition">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Warranty">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#WashingMachines -->
+
+    <owl:Class rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#WashingMachines">
+        <rdfs:subClassOf rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1Star -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1Star">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1StarRating"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2StarRating"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3StarRating"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ConsumerRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Commercial_Wall_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Commercial_Wall_Fan">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans"/>
+        <hasProductId rdf:datatype="&xsd;string">45T-W</hasProductId>
+        <hasPriceValue rdf:datatype="&xsd;double">6700.0</hasPriceValue>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Rice_Cooker_1.5L -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Rice_Cooker_1.5L">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#RiceCooker"/>
+        <hasPriceValue rdf:datatype="&xsd;double">3500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">AB1238</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Electric_Kettle_1.7L -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Electric_Kettle_1.7L">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricKettle"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">1590.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">A556K</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Table_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Table_Fan">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans"/>
+        <hasPriceValue rdf:datatype="&xsd;double">4525.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">A356F</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Toaster -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans_Toaster">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toaster"/>
+        <hasPriceValue rdf:datatype="&xsd;double">2500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">AB45678</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Abans"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sri_Lanka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Acer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Acer">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Acer_I5_Laptop -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Acer_I5_Laptop">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">129500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">A15793</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Acer"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Taiwan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Apple">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AppleS6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AppleS6">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">75000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">MKQJ2ZP/A</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Apple"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Asus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Asus">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Asus_Laptop -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Asus_Laptop">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">115000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">As1272</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Asus"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Taiwan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Beko -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Beko">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Beko_Hood -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Beko_Hood">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CookerHood"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">28699.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">B555CH</hasProductId>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Beko"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell_Inspiron_13_5379 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell_Inspiron_13_5379">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">159990.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">De1368
+</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#United_States"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell_OptiPlex(TM)_7040_Mini_Tower_1TB -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell_OptiPlex(TM)_7040_Mini_Tower_1TB">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Computers"/>
+        <hasPriceValue rdf:datatype="&xsd;double">129385.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">De567</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Dell"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#United_States"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ENERGIZER_Energy_S600 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ENERGIZER_Energy_S600">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">31999.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S600</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Energizer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Energizer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Energizer">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Germany">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP_Notebook_AMD_Ryzen_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP_Notebook_AMD_Ryzen_3">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">120000.0</hasPriceValue>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hachi -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hachi">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hachi_Toster_Black -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hachi_Toster_Black">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toaster"/>
+        <hasPriceValue rdf:datatype="&xsd;double">4467.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">H233T</hasProductId>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hachi"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#High -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#High">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HighConsumption"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hp_Prodesk_600_G4_&apos;3&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Hp_Prodesk_600_G4_&apos;3&apos;">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Computers"/>
+        <hasPriceValue rdf:datatype="&xsd;double">75000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">HPD345</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#HP"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Huawei -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Huawei">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Huawei_Y5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Huawei_Y5">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">17800.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">H789</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Huawei"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_32_LED_HD_TV -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_32_LED_HD_TV">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#TVs"/>
+        <hasPriceValue rdf:datatype="&xsd;double">20280.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">In346Tv</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_Fully_Automatic_Washing_Machine -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_Fully_Automatic_Washing_Machine">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#WashingMachines"/>
+        <hasPriceValue rdf:datatype="&xsd;double">38387.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">I567WM</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_Stand_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex_Stand_Fan">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans"/>
+        <hasPriceValue rdf:datatype="&xsd;double">6000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">In887F</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Innovex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi_Dry_iron -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi_Dry_iron">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Iron"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">1015.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">K657O</hasProductId>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi_Electric_Oven_16_Ltrs -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi_Electric_Oven_16_Ltrs">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectricOven"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">7850.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Ka098EO</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Kawashi"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG_Air_Conditioner_Dual_Cool_Deluxe_R32_Inverter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG_Air_Conditioner_Dual_Cool_Deluxe_R32_Inverter">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AirConditioners"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">350000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">LG6789WE</hasProductId>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG_Double_Door_Refrigerator_Inverter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG_Double_Door_Refrigerator_Inverter">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Refrigerators"/>
+        <hasPriceValue rdf:datatype="&xsd;double">73000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">LG554F</hasProductId>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lenovo -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lenovo">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lenovo_Ideapad_IP330 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lenovo_Ideapad_IP330">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">145000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">L234189</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lenovo"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lg_32_Smart_TV -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Lg_32_Smart_TV">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#TVs"/>
+        <hasPriceValue rdf:datatype="&xsd;double">36450.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Lg257TV</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Low -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Low">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#LowConsumption"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MSi -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MSi">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Macbook_Pro -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Macbook_Pro">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Computers"/>
+        <hasPriceValue rdf:datatype="&xsd;double">508386.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Ap4364</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Apple"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Malaysia">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maps -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maps">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maps_Dvd_Player -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maps_Dvd_Player">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#DVDPlayers"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">4500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">M567DVD</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Medium">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MediumConsumption"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#PowerConsumptionRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Midea -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Midea">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Midea_Instant_Electric_Water_Heater -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Midea_Instant_Electric_Water_Heater">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ShowerHeater"/>
+        <hasPriceValue rdf:datatype="&xsd;double">26300.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Me235SH</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#2Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Midea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Msi_Killer_Gl63_8rcs_I7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Msi_Killer_Gl63_8rcs_I7">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">173000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">MS124
+</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MSi"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Taiwan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nikai -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nikai">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nikai_Blender_1.5L -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nikai_Blender_1.5L">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Blender"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">4769.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">N5567B</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nikai"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nokia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nokia">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nokia_8.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nokia_8.1">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">78700.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">N987</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Germany"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Nokia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Oppo -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Oppo">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Oppo_A3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Oppo_A3">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">21900.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Op087</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Oppo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#UsageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Hot_Water_Shower -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Hot_Water_Shower">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ShowerHeater"/>
+        <hasPriceValue rdf:datatype="&xsd;double">17600.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Pa256SH</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Inverter_Air_Conditioner -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Inverter_Air_Conditioner">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AirConditioners"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">105000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Pa235AC
+</hasProductId>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Rice_Cooker -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic_Rice_Cooker">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#RiceCooker"/>
+        <hasPriceValue rdf:datatype="&xsd;double">5471.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">P987RC</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#1Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Panasonic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Philips -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Philips">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Philips_Vacuum_Cleaner -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Philips_Vacuum_Cleaner">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#VacuumCleaner"/>
+        <hasPriceValue rdf:datatype="&xsd;double">14950.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">P344VC</hasProductId>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#OtherActivities"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Philips"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#SAMSUNG_GALAXY_C7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#SAMSUNG_GALAXY_C7">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#MobilePhones"/>
+        <hasPriceValue rdf:datatype="&xsd;double">33900.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S456</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#China"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Samsung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Samsung -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Samsung">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_Air_Conditioner -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_Air_Conditioner">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#AirConditioners"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">75399.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S9837AC</hasProductId>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_Ceiling_Fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_Ceiling_Fan">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CoolingAndHeatingAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Fans"/>
+        <hasPriceValue rdf:datatype="&xsd;double">6750.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S987Fa</hasProductId>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Cooling_And_Heating"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_High_Speed_Blender -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer_High_Speed_Blender">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Blender"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">13500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S567B</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#KitchenActivities"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sisil -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sisil">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony_DVD_Player -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony_DVD_Player">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#DVDPlayers"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+        <hasPriceValue rdf:datatype="&xsd;double">7500.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">So284DVD</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony_Ps4_Joystick_Blutooth_Wirless -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony_Ps4_Joystick_Blutooth_Wirless">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#EntertainmentAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#GameConsoles"/>
+        <hasPriceValue rdf:datatype="&xsd;double">5900.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">S146Ga</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Entertainment"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sony"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sri_Lanka -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Sri_Lanka">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Taiwan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Taiwan">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Tokyo -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Tokyo">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toshiba -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toshiba">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ToshibaI7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ToshibaI7">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#CommunicationAppliances"/>
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Laptops"/>
+        <hasPriceValue rdf:datatype="&xsd;double">40000.0</hasPriceValue>
+        <hasProductId rdf:datatype="&xsd;string">Ts356</hasProductId>
+        <hasConsumerRating rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#3Star"/>
+        <hasUsageType rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Communication"/>
+        <hasCountry rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Tokyo"/>
+        <hasBrand rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Toshiba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ElectricAppliance/OntologiesElectricAppliance.owl#United_States -->
+
+    <owl:NamedIndividual rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#United_States">
+        <rdf:type rdf:resource="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Brand"/>
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ElectronicAppliances"/>
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Features"/>
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#Maintenance"/>
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ManufacturedCountry"/>
+            <rdf:Description rdf:about="http://www.ElectricAppliance/OntologiesElectricAppliance.owl#ValuePartition"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
